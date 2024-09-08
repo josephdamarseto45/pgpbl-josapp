@@ -60,7 +60,7 @@ this.store.select('register').subscribe(state => {
     this.toastController.create({
       message: state.error.message,
       duration: 5000,
-      header: 'Registrasi not completed'
+      header: 'Registration not completed'
     }).then(toast => toast.present());}})
 
     this.registerStateSubscription = this.store.select('register').subscribe(state => {

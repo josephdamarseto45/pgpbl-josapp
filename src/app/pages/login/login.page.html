@@ -1,0 +1,46 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="flex-center">
+    <form [formGroup]="form">
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Reciclica</ion-card-title>
+          <ion-card-subtitle>Reciclica Recycler App</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          The best app for recycle.
+
+          <ion-item>
+            <ion-label position="floating">Email Adress</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <app-error-message  [field]="form.get('email')"  error="required"  message="Must filled" ></app-error-message>
+          <app-error-message  [field]="form.get('email')" error="email"  message="Email Format Not Valid "></app-error-message>
+
+          <ion-item>
+            <ion-label position="floating">Email Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+          <app-error-message  [field]="form.get('password')"  error="required"  message="Must filled" ></app-error-message>
+
+          <!-- <app-error-message message="Password tidak boleh kosong"  *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']"></app-error-message> -->
+          <!-- <ion-label color="danger" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']"
+          >
+          Password tidak boleh kosong</ion-label> -->
+          <ion-button color="clear" fill="clear" size="full"></ion-button>
+          <ion-button color="success" size="full" [disabled]="!form.valid" (click)='login()'>Login</ion-button>
+          <ion-button color="primary" fill="clear" size="full" [disabled]="!form.get('email')?.valid"  id="recoverPasswordButton" (click)="forgotEmailPassword()">Forgot Password</ion-button>
+
+        <ion-button color="dark" fill="clear" size="full">Don't Have Account Yet?&nbsp;<a href="register"  style="text-decoration: none">Sign Up</a>
+        </ion-button>
+
+
+
+      </ion-card-content>
+    </ion-card>
+  </form>
+  </div>
+</ion-content>

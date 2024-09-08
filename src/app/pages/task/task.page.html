@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start" color="success">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/5987/5987424.png"
+    alt=""
+  />
+  <ion-card>
+    <ion-card-content>
+      <p>Address</p>
+      <p>Postal Code</p>
+      <p>Region</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list lines="inset">
+    <ion-item>
+      <ion-label position="floating">Note</ion-label>
+      <ion-textarea placeholder> </ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button size="full" expand="block"  color="success" (click)="chooseTask()">
+    Choose!
+  </ion-button>
+
+</ion-content>

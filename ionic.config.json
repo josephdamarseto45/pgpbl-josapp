@@ -1,0 +1,7 @@
+{
+  "name": "pgpbl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
